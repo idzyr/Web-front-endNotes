@@ -40,6 +40,6 @@
 * HTML DOM
   * [EventListener【事件监听器】](./JavaScript/html-dom/eventlistener.md)
 * [面向对象](javascript:void)
-  * [对象定义](./JavaScript/obj/intro.md)
+  * [JavaScript对象](./JavaScript/obj/intro.md)
 * [ECMAScript 6特性](javascript:void)
   * [Promise异步类](./JavaScript/es6/promise.md)
