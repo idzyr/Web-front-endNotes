@@ -42,5 +42,7 @@
 * [面向对象](javascript:void)
   * [JavaScript对象](./JavaScript/obj/intro.md)
   * [Prototype原型](./javascript/obj/prototype.md)
+* 内置对象
+  * [Number【数字】](./JavaScript/built-in-objects/number.md)
 * [ECMAScript 6特性](javascript:void)
   * [Promise异步类](./JavaScript/es6/promise.md)
