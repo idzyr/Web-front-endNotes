@@ -45,7 +45,7 @@ person.eyecolor="blue";
 
 
 
-### 使用{}
+### 使用{}字面量
 
 ```js
 let 对象名 = {对象属性，方法等}
@@ -170,8 +170,6 @@ JavaScript 是面向对象的语言，但 JavaScript 不使用类。
 在 JavaScript 中，**不会创建类**，也不会通过类来创建对象（就像在其他面向对象的语言中那样）。
 
 JavaScript 基于 prototype，而不是基于类的。
-
-
 
 ## JavaScript for...in 循环
 
