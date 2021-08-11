@@ -44,5 +44,8 @@
   * [Prototype原型](./javascript/obj/prototype.md)
 * 内置对象
   * [Number【数字】](./JavaScript/built-in-objects/number.md)
-* [ECMAScript 6特性](javascript:void)
+* ECMAScript 6特性
+  * [概览](./JavaScript/es6/overview.md)
+  * [let和const](./JavaScript/es6/let&const.md)
+  * [变量的结构赋值](./javascript/es6/destructuring.md)
   * [Promise异步类](./JavaScript/es6/promise.md)
