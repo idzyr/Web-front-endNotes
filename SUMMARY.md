@@ -8,7 +8,7 @@
 * [常用标签概览](./HTML/often-label.md)
 * [通用属性](./HTML/general-attributes.md)
 * [&lt;a&gt;超链接](./HTML/labels/a.md)
-* [列表](javascript:void)
+* 列表
   * [&lt;ul&gt;有序列表]() [x]
   * [&lt;ol&gt;无序列表]() [x]
   * [&lt;dl&gt;自定义列表](./HTML/labels/lists/dl.md)
