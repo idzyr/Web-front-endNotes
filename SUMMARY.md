@@ -24,10 +24,13 @@
 * [&lt;link/&gt;链接外部资源](./HTML/labels/link.md)
 * [&lt;iframe&gt;框架](./HTML/labels/iframe.md)
 * [&lt;meta/&gt;元信息](./HTML/labels/meta.md)
-* 
+* [标签特性](./HTML/characteristic.md)
+* [实体符号](./HTML/symbols.md)
+* [规范](./HTML/specification.md)
 ----
 ### CSS
-
+* [CSS介绍](./CSS/intro.md)
+* [选择器](./CSS/selector.md)
 ----
 
 ### JavaScript
