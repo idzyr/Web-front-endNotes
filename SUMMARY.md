@@ -93,3 +93,7 @@
 * [http请求](AJAX/XMLHttpRequest.md)
 * [跨越](AJAX/cross-domain.md)
 
+----
+
+### Juery
+* [Ajax](Jqyery/Ajax.md)
