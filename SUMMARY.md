@@ -76,3 +76,12 @@
   * [let和const](./JavaScript/es6/let&const.md)
   * [变量的结构赋值](./javascript/es6/destructuring.md)
   * [Promise异步类](./JavaScript/es6/promise.md)
+
+
+----
+
+### AJAX
+* [介绍](AJAX/intro.md)
+* [http请求](AJAX/XMLHttpRequest.md)
+* [跨越](AJAX/cross-domain.md)
+
