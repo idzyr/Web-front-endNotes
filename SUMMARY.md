@@ -77,6 +77,14 @@
   * [变量的结构赋值](./javascript/es6/destructuring.md)
   * [Promise异步类](./JavaScript/es6/promise.md)
 
+* 案例
+  * []()
+  * []()
+* 第三方库
+  * [百度搜索框智能提示](JavaScript/libs/baiduSug.md)
+  * [Tab选显卡](JavaScript/case-study/tab.md)
+
+
 
 ----
 
