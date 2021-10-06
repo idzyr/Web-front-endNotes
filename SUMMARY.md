@@ -2,12 +2,19 @@
 
 * [介绍](README.md)
 
-----
+---
 ### HTML
 * [HTML介绍](./HTML/intro.md)
 * [常用标签概览](./HTML/often-label.md)
+* [&lt;!-- --&gt;注释]() [x]
 * [通用属性](./HTML/general-attributes.md)
 * [&lt;a&gt;超链接](./HTML/labels/a.md)
+* [&lt;img&gt;图片](./HTML/labels/img.md)
+* [&lt;h1~h6&gt;标题]() [x]
+* [&lt;p&gt;段落]() [x]
+* [&lt;strong&gt;强调]() [x]
+* [&lt;em&gt;强调]() [x]
+* [&lt;span&gt;区块]() [x]
 * 列表
   * [&lt;ul&gt;有序列表]() [x]
   * [&lt;ol&gt;无序列表]() [x]
@@ -27,7 +34,11 @@
 * [标签特性](./HTML/characteristic.md)
 * [实体符号](./HTML/symbols.md)
 * [规范](./HTML/specification.md)
-----
+*  媒体
+   *  [&lt;audio&gt;音频](HTML/labels/media/audio.md)
+   *  [&lt;video&gt;视频](HTML/labels/media/video.md)
+   *  []()
+---
 ### CSS
 * [CSS介绍](./CSS/intro.md)
 * [选择器](./CSS/selector.md)
@@ -37,7 +48,13 @@
 * [padding【内边距】](./CSS/padding.md)
 * [margin【外边距】](./CSS/margin.md)
 * [文本](./CSS/text.md)
-* [定位【Positioning】](./CSS/positioning.md)
+* 定位
+  * [Positioning属性](CSS/Positioning/positioning-attributes.md)
+  * [position 【设置定位类型】](CSS/Positioning/position.md)
+  * [display【元素的显示方式 】](CSS/Positioning/display.md)
+  * [overflow 【内容溢出】](CSS/Positioning/overflow.md)
+  * [float【浮动】](CSS/Positioning/float.md)
+  * []()
 * [cursor【鼠标指针样式】](CSS/cursor.md)
 * [zoom【放大元素】](CSS/zoom.md)
 * [颜色(Color) ](CSS/color.md)
@@ -55,7 +72,7 @@
   * []()
 * []()
 * []()
-----
+---
 
 ### JavaScript
 
@@ -78,22 +95,28 @@
   * [Promise异步类](./JavaScript/es6/promise.md)
 
 * 案例
+    * [Tab选显卡](JavaScript/case-study/tab.md)
   * []()
   * []()
 * 第三方库
   * [百度搜索框智能提示](JavaScript/libs/baiduSug.md)
-  * [Tab选显卡](JavaScript/case-study/tab.md)
 
 
 
-----
+
+---
 
 ### AJAX
 * [介绍](AJAX/intro.md)
 * [http请求](AJAX/XMLHttpRequest.md)
 * [跨越](AJAX/cross-domain.md)
 
-----
+---
 
 ### Juery
 * [Ajax](Jqyery/Ajax.md)
+
+---
+### 移动端
+* [介绍](Mobile/intro.md)
+* [兼容方案](Mobile/compatible.md)

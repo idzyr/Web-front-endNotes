@@ -20,3 +20,9 @@
 <link rel="Shortcut Icon" href="./img/favicon.ico" type="image/x-icon">
 ```
 
+## 引用外部样式表
+
+```html
+<link href="调用文件名" rel="stylesheet">
+```
+
