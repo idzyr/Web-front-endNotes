@@ -1,0 +1,26 @@
+# @font-face字体规则
+
+
+
+## 字体样式的指定
+
+ 字体访问设置本地或服务器字体
+
+字体库的引用 [有字库](https://www.youziku.com/)
+
+```css
+ 创建字体
+
+@font-face{
+
+font-fomily：“字体名”；
+
+src：url（）字体路径可以是多个不同格式的同一个字体
+
+}
+
+ 引用字体
+
+font-fonily：“字体名”；
+```
+
