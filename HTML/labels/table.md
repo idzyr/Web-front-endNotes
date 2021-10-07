@@ -1,7 +1,9 @@
 # 表格
 
 ```html
-<table border="1">
+<table border="1">    
+     <!-- 定义表格标题 -->
+  <caption>表格标题</caption>
     <!-- 定义行 -->
   <tr>
       <!-- 定义表头 --->
@@ -20,9 +22,22 @@
 </table>
 ```
 
+
+
+- `<thead>`定义表格的页眉
+
+- `<tbody>`定义表格的主体
+
+- `<tfoot>`定义表格的页脚
+
+- `<col>`定义表格的列属性
+
+
+
 **预览；**
 
 <table border="1">
+  <caption>表格标题</caption>  
     <!-- 定义行 -->
   <tr>
       <!-- 定义表头 --->
@@ -39,6 +54,20 @@
     <td>单元格2</td>
   </tr>
 </table>
+
+
+
+**属性**
+
+- `Cellpadding=“大小”`单元格边距table标签内写
+
+- `Cellspacing=“大小”`单元格内的边距使用方法同上
+
+- `Bgcolor`表格背景颜色，background背景图片
+- 单元格合并
+  - `colspan`=“个数” 跨列
+  - `rowspan` 跨行
+
 
 
 

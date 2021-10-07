@@ -17,12 +17,21 @@
 * [&lt;img&gt;图片](./HTML/labels/img.md)
 * [&lt;h1~h6&gt;标题]() [x]
 * [&lt;p&gt;段落]() [x]
-* [&lt;strong&gt;强调]() [x]
-* [&lt;em&gt;强调]() [x]
+* 格式化
+  * [&lt;strong&gt;强调文本]() [x]
+  * [&lt;em&gt;强调文本]() [x]
+  * [&lt;b&gt;粗体文字]() [x]
+  * [&lt;big&gt;大号字]() [x]
+  * [&lt;i&gt;斜体字]() [x]
+  * [&lt;small&gt;小号字]() [x]
+  * [&lt;sub&gt;下标字]() [x]
+  * [&lt;sup&gt;上标字]() [x]
+  * [&lt;ins&gt;插入字]() [x]
+  * [&lt;del&gt;删除字]() [x]
 * [&lt;span&gt;区块]() [x]
 * 列表
-  * [&lt;ul&gt;有序列表]() [x]
-  * [&lt;ol&gt;无序列表]() [x]
+  * [&lt;ul&gt;无序列表](HTML/labels/lists/ul.md)
+  * [&lt;ol&gt;有序列表](HTML/labels/lists/ol.md)
   * [&lt;dl&gt;自定义列表](./HTML/labels/lists/dl.md)
 * [&lt;table&gt;表格](./HTML/labels/table.md)
 * [&lt;form&gt;表单](./HTML/labels/forms/form.md)
@@ -33,6 +42,7 @@
   * [checkbox复选框](./HTML/labels/forms/checkbox.md)
   * [&lt;select&gt;下拉列表](./HTML/labels/forms/select.md)
   * [&lt;textarea&gt;文本域](./HTML/labels/forms/textarea.md)
+  * [&lt;fieldset&gt;表单分组（带边框）](HTML/labels/forms/fieldset.md)
 * [&lt;link/&gt;链接外部资源](./HTML/labels/link.md)
 * [&lt;iframe&gt;框架](./HTML/labels/iframe.md)
 * [&lt;meta/&gt;元信息](./HTML/labels/meta.md)
