@@ -50,3 +50,25 @@ div{
 
 元素选择器 < class选择器 < id选择器 < style行间样式 < JavaScript
 
+
+
+## 语句权重
+
+在语句后面添加 !important
+
+```css
+#example {
+  font-size: 14px !important; 
+}
+ 
+#container #example {
+  font-size: 10px;
+}       
+```
+
+ **解释**
+
+在上面的代码示例中，由于使用了`!important`，id为“example”的元素字号将被设置为14px。
+
+如果不使用`!important`，第二个样式声明的代码块很自然地比第一个的权重要大，原因有二：在样式表中第二个代码块要比第一个出现的晚（即，它位列第二）；第二个代码块有更大的权重（是由两个id，#container #example组合而成，而不是只有一个id，#example。但是因为第一个代码块里面包含了`!important`，所以对于字号设置来说它有更大的权重。
+
