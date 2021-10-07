@@ -33,3 +33,5 @@
 | [value](https://www.runoob.com/tags/att-input-value.html)    | *text*                                                       | 指定 \<input> 元素 value 的值。                              |
 | [width](https://www.runoob.com/tags/att-input-width.html)**New** | *pixels*                                                     | width 属性规定 \<input> 元素的宽度。 (只针对type="image")    |
 
+- `autocomplete="off"` //是否根据以前输入的内容进行自动匹配填充。on=开/off=关
+

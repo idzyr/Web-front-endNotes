@@ -20,3 +20,39 @@
 | description      | 规定页面的描述。搜索引擎会把这个描述显示在搜索结果中。  实例： <meta name="description" content="Free web tutorials"> |
 | generator        | 规定用于生成文档的一个软件包（不用于手写页面）。  实例： <meta name="generator" content="FrontPage 4.0"> |
 | keywords         | 规定一个逗号分隔的关键词列表 - 相关的网页（告诉搜索引擎页面是与什么相关的）。  **提示：**总是规定关键词（对于搜索引擎进行页面分类是必要的）。  实例： <meta name="keywords" content="HTML, meta tag, tag reference"> |
+
+为搜索引擎定义关键词:
+
+```css
+<meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
+```
+
+为网页定义描述内容:
+
+```css
+<meta name="description" content="免费 Web & 编程 教程">
+```
+
+
+
+定义网页作者:
+
+```css
+<meta name="author" content="Runoob">
+```
+
+
+
+## http-equiv
+
+每30秒钟刷新当前页面:
+
+```css
+<meta http-equiv="refresh" content="30">
+```
+
+| content-type  | 规定文档的字符编码。  实例：  `<meta http-equiv="content-type"  content="text/html; charset=UTF-8">` |
+| ------------- | ------------------------------------------------------------ |
+| default-style | 规定要使用的预定义的样式表。  实例：  `<meta http-equiv="default-style" content="*the document's preferred  stylesheet*">`  **注释：**上面 content 属性的值必须匹配同一文档中的一个 link 元素上的 title 属性的值，或者必须匹配同一文档中的一个 style 元素上的 title 属性的值。 |
+| refresh       | 定义文档自动刷新的时间间隔。  实例：  `<meta http-equiv="refresh"  content="300">`  注释：值 "refresh" 应该慎重使用，因为它会使得页面不受用户控制。在 [W3C's   Web 内容可访问性指南](http://www.w3.org/WAI/intro/wcag.php) 中使用 "refresh" 会到导致失败。 |
+
