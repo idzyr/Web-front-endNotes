@@ -62,9 +62,21 @@ border-radius: 1-4 length|% / 1-4 length|%;
 
 
 
-## outline 去除焦点框
+## outline 
 
 ```css
-    outline: none; //主要适用input
+    outline: none; //主要适用input  去除焦点框
 ```
+
+outline设置轮廓属性
+
+- `outline-color`设置轮廓颜色
+- `outline-style`设置轮廓样式
+- `outline-width`设置轮廓宽度
+
+## box-shadow  
+
+边框阴影 参数 右 下 透明度 颜色
+
+
 

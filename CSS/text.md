@@ -29,14 +29,38 @@
 ## 常用设置
 
 - `font size`——文字大小（中文最小12px都是偶数）
+
 - `font family`——文字字体（可以直接跟中文字体名加逗号继续跟其它字体airal英文常用字体）
+
 - `color`——字体颜色除用颜色单词外其它写法#十六位颜色码也可以用rgb（rgb颜色码每种以逗号隔开）
+
 - `line-height`——行高(文字间隙=行高-字体大小除以2)文字上下居中的方法设置一个和盒子一样的行高
+
 - `text-align`——文本对齐方式
+
 - `text-indent`——首行缩进（1em=缩进1个字）
-- f`ont-weight`——文字着重（bold粗体normal正常）
+
+- `font-weight`——文字着重（bold粗体normal正常）
+
 - `font-style`——文字倾斜（italic斜体）
+
 - `text-decoration`——文字修饰（underline下划线）（line through中划线或删除线）（overline上划线）none没有
+
 - `letter-spacing`——字母间距
+
 - `word-spacing`——单词间距（以空格为解析单位）
+
+- `text-transform` 元素中的字母规定字母的大小写及单词首字母大写。
+
+   | 值         | 描述                                           |
+   | :--------- | :--------------------------------------------- |
+   | none       | 默认。定义带有小写字母和大写字母的标准的文本。 |
+   | capitalize | 文本中的每个单词以大写字母开头。               |
+   | uppercase  | 定义仅有大写字母。                             |
+   | lowercase  | 定义无大写字母，仅有小写字母。                 |
+   | inherit    | 规定应该从父元素继承 text-transform 属性的值。 |
+
+- `text-shadow`向文本添加阴影
+
+   四个参数；距离文本左 距离文本上 阴影大小 颜色
 

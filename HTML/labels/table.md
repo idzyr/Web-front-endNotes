@@ -59,11 +59,11 @@
 
 **属性**
 
-- `Cellpadding=“大小”`单元格边距table标签内写
-
-- `Cellspacing=“大小”`单元格内的边距使用方法同上
-
-- `Bgcolor`表格背景颜色，background背景图片
+- `cellpadding=“大小”`单元格边距table标签内写
+- `cellspacing=“大小”`单元格内的边距使用方法同上
+- `bgcolor`表格背景颜色，background背景图片
+-  `border` 表格边距
+- `border-collapse` 折叠边框
 - 单元格合并
   - `colspan`=“个数” 跨列
   - `rowspan` 跨行
