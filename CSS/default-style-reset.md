@@ -15,6 +15,23 @@
 - select；margin：0
 - textarea；margin：0 padding：0
 
+##  去除图片底侧空白缝隙
+
+![img](default-style-reset-images/35vertical.png)
+
+
+
+**原因：**
+
+图片或者表单等行内块元素，他的底线会和父级盒子的基线对齐。
+
+就是图片底侧会有一个空白缝隙。
+
+**解决的方法就是：**
+
+- `给img vertical-align:middle | top| bottom`等等。 让图片不要和基线对齐。
+- 给img 添加 display：block; 转换为块级元素就不会存在问题了。
+
 ## Normalize.css
 
 > 第三方的css样式初始化库

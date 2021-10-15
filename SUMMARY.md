@@ -93,6 +93,8 @@
   * [User-interface属性](CSS/user-interface/user-interface-attributes.md)
   * [box-sizing 【盒子计算方式】](CSS/user-interface/box-sizing.md)
   * []()
+* [对齐方式](CSS/align.md)
+* [精灵图](CCSS/sprite.md)
 * [浏览器内核识别码](CSS/sign.md)
 * 案例
   * [内容溢出显示...](CSS/case-study/display-ellipsis.md)
