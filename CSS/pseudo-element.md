@@ -9,10 +9,12 @@
 | :first-letter | 定义对象内第一个字符的样式                |
 | :first-line   | 定义对象内第一行的样式                    |
 
+> 书写时建议使用两个冒号`::before` 格式这样比较容易和伪类选择器区分。
+
 ## 示例代码
 
 ```css
-\#user input{
+#user input{
 
   width: 200px;
 
@@ -28,7 +30,7 @@
 
 }
 
-\#user::before{
+#user::before{
 
   content: '';
 

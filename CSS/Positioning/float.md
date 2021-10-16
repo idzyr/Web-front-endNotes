@@ -18,25 +18,85 @@
 
 5. 提升层级半层，元素浮起的高度只够另一个元素挤进去元素上面的内容会被挤掉
 
-   `clear：left/right/both/none`——元素的某个方向上不能有浮动元素
+   
 
 ## 清浮动
 
-1. 加浮动后父级保不住子级
+**问题；**
 
-2. 同样给父级加浮动
+加浮动后父级保不住子级也就是造成父级高度塌陷的原因及，所以我们要清除浮动。
 
-3. 给父级加display：inline-block
+![img](file:///E:/%E6%95%99%E7%A8%8B/%E9%BB%91%E9%A9%AC%E5%89%8D%E7%AB%AF2019/%E3%80%9027%E3%80%91%E6%BA%90%E7%A0%81+%E8%AF%BE%E4%BB%B6+%E8%BD%AF%E4%BB%B6/01-03%20%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%9F%BA%E7%A1%80/02-CSS%E8%B5%84%E6%96%99/02-CSS%E8%B5%84%E6%96%99/CSS-Day04/%E7%AC%94%E8%AE%B0/media/no.jpg)
 
-4. 给浮动元素下加一个空的div并且设置一下样式
+```
+选择器{clear:属性值;}   clear 清除  
+```
 
-   高度0px 字体大小0px clear：both
+| 属性值 | 描述                                       |
+| ------ | ------------------------------------------ |
+| left   | 不允许左侧有浮动元素（清除左侧浮动的影响） |
+| right  | 不允许右侧有浮动元素（清除右侧浮动的影响） |
+| both   | 同时清除左右两侧浮动的影响                 |
 
-5. 在浮动元素下加
-   all=both 不符合w3c标准
+但是我们实际工作中， 几乎只用 clear: both;
 
-6. 给浮动元素的父级加（zoom：1）再加上一下样式
+### ~~给父级元素添加高度~~
 
-   After{content：“”；display：block；clear：both；}
+这种方法只适用于已知子级元素高度且后续不在更改元素的高度使用。给父级元素一定的高度，表面上是可以解决高度塌陷问题，当子级元素的高度改变后，子级高度过大会导致浮动元素超出父级边框，子级高度过小会导致父级底部区域有空白。这样就不利于后续元素调整大小操作。
 
-7. 给浮动元素父级加overflow：auto 一定要配合zoom1
+### 常规做法
+
+1. 同样给父级加浮动
+2. 给父级加display：inline-block
+
+### 额外标签法(隔墙法)
+
+是W3C推荐的做法是通过在浮动元素末尾添加一个空的标签例如 `<div style="clear:both"></div>`，或则其他标签br等亦可。
+
+- 优点： 通俗易懂，书写方便
+- 缺点： 添加许多无意义的标签，结构化较差。
+
+### 父级添加overflow属性方法
+
+```css
+可以给父级添加： overflow为 hidden| auto| scroll  都可以实现。
+```
+
+优点： 代码简洁
+
+缺点： 内容增多时候容易造成不会自动换行导致内容被隐藏掉，无法显示需要溢出的元素。
+
+### 使用after伪元素清除浮动
+
+**:after 方式为空元素额外标签法的升级版，好处是不用单独加标签了**
+
+使用方法：
+
+```css
+ .clearfix:after {  content: ""; display: block; height: 0; clear: both; visibility: hidden;  }   
+
+ .clearfix {*zoom: 1;}   /* IE6、7 专有 */
+```
+
+- 优点： 符合闭合浮动思想 结构语义化正确
+- 缺点： 由于IE6-7不支持:after，使用 zoom:1触发 hasLayout。
+
+### 使用双伪元素清除浮动
+
+使用方法：
+
+```css
+.clearfix:before,.clearfix:after { 
+  content:"";
+  display:table; 
+}
+.clearfix:after {
+ clear:both;
+}
+.clearfix {
+  *zoom:1;
+}
+```
+
+- 优点： 代码更简洁
+- 缺点： 由于IE6-7不支持:after，使用 zoom:1触发 hasLayout。
