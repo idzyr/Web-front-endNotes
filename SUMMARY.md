@@ -168,3 +168,7 @@
 * css规范
   * [属性](Specification/css/property.md)
 * [布局](Specification/other/layout.md)
+
+### 附录
+* [语言代码 参考手册](Appendix/language-code.md)
+* [术语](Appendix/term.md)
