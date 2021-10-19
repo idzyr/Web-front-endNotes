@@ -79,3 +79,7 @@
 
   <img src="layout-images/image-20211019155913954.png" alt="image-20211019155913954" style="zoom:50%;" />
 
+- 版心盒子内的内容盒子是可以版心盒子宽的
+
+  ![image-20211019214457897](layout-images/image-20211019214457897.png)
+

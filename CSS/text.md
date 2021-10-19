@@ -40,7 +40,7 @@
 
 - `text-indent`——首行缩进（1em=缩进1个字）
 
-- `font-weight`——文字着重（bold粗体normal正常）
+- `font-weight`——文字着重（bold粗体normal或400正常）
 
 - `font-style`——文字倾斜（italic斜体）
 
