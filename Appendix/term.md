@@ -9,6 +9,6 @@
 | subnav    | 侧导航栏 |
 | banner    | 横幅     |
 | copyright | 版权     |
-|           |          |
-|           |          |
+| current   | 当前     |
+| mask      | 遮罩     |
 
