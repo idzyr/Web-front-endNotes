@@ -165,8 +165,10 @@
   * [媒体查询](Mobile/Responsive/media-inquiries.md)
 
 ### 前端代码规范
-* css规范
-  * [属性](Specification/css/property.md)
+* [HTNL规范](Specification/htnl.md)
+* [CSS规范](Specification/css.md)
+* [图片规范](Specification/image.md)
+* [命名规范](Specification/naming.md)
 * [布局](Specification/other/layout.md)
 
 ### 附录
