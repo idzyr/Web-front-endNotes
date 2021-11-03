@@ -16,8 +16,11 @@
 
 ## 网页ico
 
+首先把favicon.ico 这个图标放到根目录下
+
 ```html
 <link rel="Shortcut Icon" href="./img/favicon.ico" type="image/x-icon">
+<!-- type="image/x-icon" 属性可以省略。（我相信你也愿意省略。） -->
 ```
 
 ## 引用外部样式表

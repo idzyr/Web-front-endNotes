@@ -91,13 +91,35 @@
 
 - 想导航栏中的链接，文本个数不确定那么就不要指定其width，我们使用padding来撑开其宽度
 
-- 列表行与行之间的距离测量也就是行高，从上一个盒子的文本底部到当前盒子文本的底部。然后为盒子设置这个得到的高度，设置了高度列表之间的距离就自然拉开了最后设置文本垂直居中即可。
+- 如果设计图中没有给定每个列表项大小列表行与行之间的距离测量也就是行高，从上一个盒子的文本底部到当前盒子文本的底部。然后为盒子设置这个得到的高度，设置了高度列表之间的距离就自然拉开了最后设置文本垂直居中即可。
 
   <img src="layout-images/image-20211019155913954.png" alt="image-20211019155913954" style="zoom:50%;" />
 
 - 版心盒子内的内容盒子是可以版心盒子宽的
 
   ![image-20211019214457897](layout-images/image-20211019214457897.png)
+
+- 想这种效果可以使用span包含`|` 给span加margin让其撑开a标签
+
+  ![image-20211102214212572](layout-images/image-20211102214212572.png)
+
+  ```html
+  <p class="mod_copyright_links">
+                  <a href="#">关于我们</a>
+                  <span>|</span>
+                  <a href="#">联系我们</a>
+                  <span>|</span>
+                  <a href="#">联系客服</a>
+  </p>
+  ```
+
+  ````css
+  .mod_copyright_links span{
+      margin: 0 10px;
+  }
+  ````
+
+  
 
 ## 图片使用
 
@@ -153,4 +175,74 @@
 如果要设置hover边框样式需要这样写
 
 ![image-20211031140510306](layout-images/image-20211031140510306.png)
+
+
+
+## logo优化
+
+- logo 里面 首先放一个 h1 标签 ，目的是为了提权，告诉搜索引擎，这个地方很重要
+- h1里面在放一个连接，可以返回首页的， 给连接一个 大小 和 logo 的背景图片
+- 连接 里面要放文字（网站名称），为了搜索引擎收录我们。 但是文字不要显示出来
+  - 要用 text-indent 移到盒子外面 （text-indent: -9999px) 然后overflow:hidden 淘宝的做法
+  - 直接给font-size: 0; 就看不到文字了， 京东的做法。
+- 最后给 连接一个 title 这样鼠标放到logo 上， 就可以看到提示文字了
+
+```html
+<div class="logo">
+        <h1>
+            <a href="index.html" title="品优购">品优购</a>
+        </h1>
+    </div>
+```
+
+````css
+.logo h1 a {
+    display: block;
+    width: 171px;
+    height: 61px;
+    font-size: 0;
+    background-image: url("../img/logo.png");
+}
+````
+
+
+
+## 提醒小红点
+
+- count 统计部分 不要给宽度，因为可能买的件数比较多，让件数撑开就好了 给一个高度
+- 一定注意左下角 不是圆角 其余三个是圆角
+
+![image-20211101164225322](layout-images/image-20211101164225322.png)
+
+````html
+<i class="count">8</i>
+````
+
+````css
+.count {
+    position: absolute;
+    top: -5px;
+    /*文本增多时我们应该让其往左走所以要使用左偏移而非右偏移*/
+    left: 105px;
+    height: 14px;
+    padding: 0 3px;
+    line-height: 14px;
+    text-align: center;
+    color: #fefefe;
+    background-color: #e60012;
+    border-radius: 5px 5px 5px 0;
+}
+````
+
+
+
+## 侧边导航
+
+![image-20211101204924079](layout-images/image-20211101204924079.png)
+
+划分，一个大盒子包含两个子盒子
+
+![img](layout-images/9.png)
+
+![image-20211101205137894](layout-images/image-20211101205137894.png)
 

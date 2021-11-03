@@ -10,7 +10,7 @@
 - 样式文件夹：css
 - 脚本文件夹：js
 - 样式类图片文件夹：img
-- 产品类图片文件夹： upload
+- 产品类图片文件夹： `upload`
 - 字体类文件夹： fonts
 
 ## ClassName命名
