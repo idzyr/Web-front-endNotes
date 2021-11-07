@@ -32,7 +32,7 @@ none——没有属性会获得过渡效果。
 
 all——所有属性都将获得过渡效果。
 
-property ——定义应用过渡效果的 CSS 属性名称列表，列表以逗号分隔。
+property ——定义应用过渡效果的 CSS 属性名称列表，**列表以逗号分隔**。
 
 ## transition-duration【动画持续时间】
 
@@ -65,6 +65,8 @@ transition-timing-function: linear;
 - `ease-out` 规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。
 - `ease-in-out` 规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。
 - `cubic-bezier(n,n,n,n)` 在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。
+
+![1498445454760](transition-images/1498445454760.png)
 
 ## transition-delay【动画开始时间】
 
