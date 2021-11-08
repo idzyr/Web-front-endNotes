@@ -234,6 +234,76 @@
 }
 ````
 
+## 分页模块
+
+使用行内块元素来布局方便对齐
+
+![image-20211108141635492](layout-images/image-20211108141635492.png)
+
+```html
+<div class="page">
+            <span class="page_index">
+                <a href="#" class="page_previous">&lt;&lt;上一页</a>
+                <a href="#">1</a>
+                <a href="#" class="current">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#" class="page_more">...</a>
+                <a href="#" class="page_next">下一页&gt;&gt;</a>
+            </span>
+            <span class="page_skip">
+                共10页 到第
+                <input type="text">
+                页
+                <button>确定</button>
+            </span>
+    </div>
+```
+
+
+
+```css
+.page {
+    margin: 20px 0;
+    text-align: center;
+}
+.page_index a{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    line-height: 36px;
+
+}
+.page .page_more ,
+.page .current{
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+.page .page_previous ,
+.page .page_next{
+    width: 86px;
+}
+.page_skip input {
+    width: 46px;
+    height: 36px;
+    text-align: center;
+    transition: all .3s;
+}
+.page_skip input:focus {
+    width: 90px;
+    border: 1px solid #c81623;
+}
+.page_skip button {
+    display: inline-block;
+    width: 54px;
+    height: 36px;
+    border: 1px solid #ccc;
+}
+```
+
 
 
 ## 侧边导航
@@ -245,4 +315,16 @@
 ![img](layout-images/9.png)
 
 ![image-20211101205137894](layout-images/image-20211101205137894.png)
+
+
+
+## 问题解决
+
+1. **问题；**为盒子添加hover时添加边框导致盒子变大，引起其它元素位置改变。
+
+   ![image-20211108131738339](layout-images/image-20211108131738339.png)
+
+解决；可以为盒子先设置一个透明边框，在hover事件中只改变其颜色
+
+
 

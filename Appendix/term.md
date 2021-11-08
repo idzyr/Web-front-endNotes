@@ -127,3 +127,31 @@
 | video                  | 视频                                     |
 | wrap                   | 容器，包，一般用于最外层                 |
 | wrapper                | 容器，包，一般用于最外层                 |
+
+| 名称             | 说明                                |
+| ---------------- | ----------------------------------- |
+| 主体             | de_container                        |
+| 面包屑导航       | crumb_wrap                          |
+| 产品介绍         | product_intro （ introduction介绍） |
+| 预览包           | preview_wrap（左侧部分）            |
+| 预览缩略图       | preview_img                         |
+| 预览列表         | preview_list                        |
+| 左按钮           | arrow_prev                          |
+| 右按钮           | arrow_next                          |
+| 小图列表         | preview_items                       |
+| 产品详细信息区域 | itemInfo_wrap （右侧部分）          |
+| 头部名称         | sku_name skull 头骨                 |
+| 新闻             | news                                |
+| 摘要             | summary                             |
+| 评价             | remark                              |
+| 价格摘要         | summary_price                       |
+| 配送至           | summary_stock                       |
+| 支持             | summary_support                     |
+| 选择             | choose                              |
+| 选择按钮组       | choose_btns                         |
+| 选择数量         | choose_amount                       |
+| 减去             | reduce                              |
+| 加入购物车       | addshopcar                          |
+| 产品细节         | product_detail （ detail描述）      |
+| 左侧边           | aside                               |
+| 详细描述         | detail                              |
