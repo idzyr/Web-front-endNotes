@@ -43,6 +43,7 @@
   * [&lt;select&gt;下拉列表](./HTML/labels/forms/select.md)
   * [&lt;textarea&gt;文本域](./HTML/labels/forms/textarea.md)
   * [&lt;fieldset&gt;表单分组（带边框）](HTML/labels/forms/fieldset.md)
+  * [&lt;label&gt;标注](HTML/labels/forms/label.md)
 * [&lt;link/&gt;链接外部资源](./HTML/labels/link.md)
 * [&lt;iframe&gt;框架](./HTML/labels/iframe.md)
 * [&lt;meta/&gt;元信息](./HTML/labels/meta.md)

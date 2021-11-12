@@ -318,6 +318,56 @@
 
 
 
+## 注册页面布局
+
+![image-20211112202430572](layout-images/image-20211112202430572.png)
+
+- 表单盒子按内容所需设置宽高然后垂直居中
+- 像这种行列布局的表单可以使用ul li来布局
+- 左侧的采集信息名称可以使用label和表单元素进行绑定，要想让采集信息名称靠右对齐可以先为其设置一个固定的宽度然后让文本右对齐。
+
+```html
+        <form class="reg_form" action="" method="post" name="reg-form">
+            <ul>
+                <li>
+                    <label for="tel">手机号：</label>
+                    <input type="text" id="tel" name="tel">
+                    <span class="error"><i class="error_icon"></i>手机号码格式不正确，请从新输入</span>
+                </li>
+                <li>
+                    <label for="verification_code">短信验证码：</label>
+                    <input type="text" id="verification_code" name="phone">
+                </li>
+                <li>
+                    <label for="pwd">登陆密码：</label>
+                    <input type="password" id="pwd" name="phone">
+                    <span class="success"><i class="success_icon"></i></span>
+                </li>
+                <li class="safety_hint">
+                    安全程度
+                    <em class="weak">弱</em>
+                    <em class="medium">中</em>
+                    <em class="powerful">强</em>
+                </li>
+                <li>
+                    <label for="confirm_pwd">确认密码：</label>
+                    <input type="password" id="confirm_pwd" name="phone">
+                </li>
+                <li class="protocol">
+                    <input id="isagree" type="checkbox" checked="checked" name="isagree">
+                    <label for="isagree">同意协议并注册</label>
+                    <a href="#">《知果果用户协议》</a>
+                </li>
+                <li class="submit_btn">
+                    <input type="submit" id="submit">
+                </li>
+            </ul>
+        </form>
+
+```
+
+
+
 ## 问题解决
 
 1. **问题；**为盒子添加hover时添加边框导致盒子变大，引起其它元素位置改变。
