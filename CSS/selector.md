@@ -181,3 +181,125 @@ H1+p{样式只有p元素生效 必须是同一个父级}
 
 生效；①和②
 
+## 属性选择器
+
+| 选择器          | 说明                                  |
+| --------------- | ------------------------------------- |
+| `E[att]`        | 选择具有att属性的E元素                |
+| `E[att="val"]`  | 选择具有att属性且属性值等于val的E元素 |
+| `E[att^="val"]` | 匹配具有att属性、且值以val开头的E元素 |
+| `E[att$="val"]` | 匹配具有att属性 且值以val结尾的E元素  |
+| `E[att*="val"]` | 匹配具有att属性、且值中含有val的E元   |
+
+类选择器、属性选择器、伪类选择器，权重为 10
+
+
+
+## 结构伪类选择器
+
+| 选择符             | 说明                        |
+| ------------------ | --------------------------- |
+| `E:first-child`    | 匹配父元素中的第一个子元素E |
+| `E:last-child`     | 匹配父元素中最后一个E元素   |
+| `E:nth-child(n)`   | 匹配父元素中的第n个子元素E  |
+| `E:first-of-type`  | 指定类型E的第一个           |
+| `E:last-of-type`   | 指定类型E的最后一个         |
+| `E:nth-of-type(n)` | 指定类型E的第n个            |
+
+类选择器、属性选择器、伪类选择器，权重为 10
+
+### nth-child（n）
+
+- n可以是数字，关键字和公式
+- n如果是数字，就是选择第n个
+- 常见的关键词 even 偶数 odd 奇数
+- 常见的公式如下 ( 如果n是公式，则从0开始计算）
+- 但是 第0个元素或者超出了元素的个数会被忽略 )
+
+
+
+| 公式 | 取值                            |
+| ---- | ------------------------------- |
+| 2n   | 偶数                            |
+| 2n+1 | 奇数                            |
+| 5n   | 5 10 15 ... 倍数                |
+| n+5  | 从第5个开始（包含第五个）到最后 |
+| -n+5 | 前5个（包含第5个）...           |
+
+```html
+<style>
+  /* 偶数 */
+  ul li:nth-child(even) {
+    background-color: aquamarine;
+  }
+
+  /* 奇数 */
+  ul li:nth-child(odd) {
+    background-color: blueviolet;
+  }
+
+  /*n 是公式，从 0 开始计算 */
+  ul li:nth-child(n) {
+    background-color: lightcoral;
+  }
+
+  /* 偶数 */
+  ul li:nth-child(2n) {
+    background-color: lightskyblue;
+  }
+
+  /* 奇数 */
+  ul li:nth-child(2n + 1) {
+    background-color: lightsalmon;
+  }
+
+  /* 选择第 0 5 10 15, 应该怎么选 */
+  ul li:nth-child(5n) {
+    background-color: orangered;
+  }
+
+  /* n + 5 就是从第5个开始往后选择 */
+  ul li:nth-child(n + 5) {
+    background-color: peru;
+  }
+
+  /* -n + 5 前五个 */
+  ul li:nth-child(-n + 5) {
+    background-color: tan;
+  }
+</style>
+```
+
+### `nth-child` 和 `nt-of-type` 的区别
+
+```html
+<style>
+  div :nth-child(1) {
+    background-color: lightblue;
+  }
+
+  div :nth-child(2) {
+    background-color: lightpink;
+  }
+
+  div span:nth-of-type(2) {
+    background-color: lightseagreen;
+  }
+
+  div span:nth-of-type(3) {
+    background-color: #fff;
+  }
+</style>
+```
+
+- `nth-child` 选择父元素里面的第几个子元素，不管是第几个类型
+- `nt-of-type` 选择指定类型的元素
+
+**总结；**
+
+- 结构伪类选择器就是选择第n个
+- nth-child从**所有子级**开始算的，**可能不是同一种类型**
+- nth-of-type 是指定**同一种类型**的子级，比如 `ul li:nth-of-type(2)` 是选择第2个li
+- 关于nth-child（n） 我们要知道**n从0开始计算的**，要记住常用的公式
+- 如果是无无序列表，我们肯定用 nth-child 更多
+

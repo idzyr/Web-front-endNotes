@@ -33,7 +33,39 @@
 | [value](https://www.runoob.com/tags/att-input-value.html)    | *text*                                                       | 指定 \<input> 元素 value 的值。                              |
 | [width](https://www.runoob.com/tags/att-input-width.html)**New** | *pixels*                                                     | width 属性规定 \<input> 元素的宽度。 (只针对type="image")    |
 
-- `autocomplete="off"` //是否根据以前输入的内容进行自动匹配填充。on=开/off=关
-- `required` 属性规定必需在提交表单之前填写输入字段。
+- `autocomplete="off"` 是否根据以前提交输入的内容进行自动匹配填充。on=开（默认）/off=关 **需要指定name属性**
+- `required` 属性规定必需在提交表单之前填写输入字段。也就是表单内容不可以为空
 - `autofocus` 属性规定当页面加载时\<input> 元素应该自动获得焦点。
+- `multiple` 允许用户输入到 \<input> 元素的多个值。如input type="file" 可以支持选择多个文件
 
+
+
+## type 属性
+
+**New**为HTML5新镇
+
+| 值                    | 描述                                                         |
+| :-------------------- | :----------------------------------------------------------- |
+| button                | 定义可点击的按钮（通常与 JavaScript 一起使用来启动脚本）。   |
+| checkbox              | 定义复选框。                                                 |
+| color**New**          | 定义拾色器。                                                 |
+| date**New**           | 定义 date 控件（包括年、月、日，不包括时间）。               |
+| datetime**New**       | 定义 date 和 time 控件（包括年、月、日、时、分、秒、几分之一秒，基于 UTC 时区）。 |
+| datetime-local**New** | 定义 date 和 time 控件（包括年、月、日、时、分、秒、几分之一秒，不带时区）。 |
+| email**New**          | 定义用于 e-mail 地址的字段。                                 |
+| file                  | 定义文件选择字段和 "浏览..." 按钮，供文件上传。              |
+| hidden                | 定义隐藏输入字段。                                           |
+| image                 | 定义图像作为提交按钮。                                       |
+| month**New**          | 定义 month 和 year 控件（不带时区）。                        |
+| number**New**         | 定义用于输入数字的字段。                                     |
+| password              | 定义密码字段（字段中的字符会被遮蔽）。                       |
+| radio                 | 定义单选按钮。                                               |
+| range**New**          | 定义用于精确值不重要的输入数字的控件（比如 slider 控件）。   |
+| reset                 | 定义重置按钮（重置所有的表单值为默认值）。                   |
+| search**New**         | 定义用于输入搜索字符串的文本字段。                           |
+| submit                | 定义提交按钮。                                               |
+| tel**New**            | 定义用于输入电话号码的字段。                                 |
+| text                  | 默认。定义一个单行的文本字段（默认宽度为 20 个字符）。       |
+| time**New**           | 定义用于输入时间的控件（不带时区）。                         |
+| url**New**            | 定义用于输入 URL 的字段。                                    |
+| week**New**           | 定义 week 和 year 控件（不带时区）。                         |
