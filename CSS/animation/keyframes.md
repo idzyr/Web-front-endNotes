@@ -16,6 +16,22 @@ from {top:0px;}
 to {top:200px;}
 }
 
+@keyframes my_anin {
+            0% {
+                height: 300px;
+                background-color: red;
+            }
+
+            50% {
+                background-color: burlywood;
+            }
+
+            to {
+                height: 400px;
+            }
+
+        }
+
 @-webkit-keyframes mymove /* Safari and Chrome */
 {
 from {top:0px;}
@@ -38,6 +54,8 @@ to {top:200px;}
 | *animationname*      | 必需的。定义动画的名称。                                     |
 | *keyframes-selector* | 必需的。动画持续时间的百分比。合法值：0-100% from (等价于0%) to (等价于100%）注**意：** 您可以用一个动画keyframes-selectors。 |
 | *css-styles*         | 必需的。一个或多个合法的CSS样式属性                          |
+
+
 
 ## animation 【使用动画】
 
@@ -70,14 +88,16 @@ div
 
 - animation-timing-function——规定动画完成一个周期的曲线
 
-  **属性值；**
+  ![1498445454760](keyframes-images/1498445454760.png)
 
-  - linear 动画从头到尾的速度是相同的。
-  - ease 默认。动画以低速开始，然后加快，在结束前变慢
-  - ease-in 动画以低速开始。
-  - ease-out 动画以低速结束。
-  - ease-in-out 动画以低速开始和结束。
-  - cubic-bezier(n,n,n,n) 在 cubic-bezier 函数中自己贝塞尔曲线的值。可能的值是从 0 到 1 的数值。
+  | 值                    | 说明                                                         |
+  | --------------------- | ------------------------------------------------------------ |
+  | linear                | 动画从头到尾的速度是相同的。                                 |
+  | ease  **默认**        | 动画以低速开始，然后加快，在结束前变慢                       |
+  | ease-in               | 动画以低速开始。                                             |
+  | ease-out              | 动画以低速结束。                                             |
+  | ease-in-out           | 动画以低速开始和结束。                                       |
+  | cubic-bezier(n,n,n,n) | 在 cubic-bezier 函数中自己贝塞尔曲线的值。可能的值是从 0 到 1 的数值。 |
 
 - animation-delay——设置一个动画延迟多少秒或毫秒开始
 
@@ -85,25 +105,42 @@ div
 
 - animation-direction——设置动画是否反向播放，
 
-  **属性值；**
-
-  - normal 默认值。动画按正常播放。 测试 »
-  - reverse 动画反向播放。 测试 »
-  - alternate 动画在奇数次（1、3、5...）正向播放，在偶数次（2、4、6...）反向播放。 测试 »
-  - alternate-reverse 动画在奇数次（1、3、5...）反向播放，在偶数次（2、4、6...）正向播放。
+  | 值                  | 说明                                                         |
+  | ------------------- | ------------------------------------------------------------ |
+  | normal   **默认值** | 动画按正常播放                                               |
+  | reverse             | 动画反向播放。                                               |
+  | alternate           | 动画的播放次数在奇数次（1、3、5...）正向播放，在偶数次（2、4、6...）反向播放。 让动画反向播放 |
+  | alternate-reverse   | 动画的播放次数在奇数次（1、3、5...）反向播放，在偶数次（2、4、6...）正向播放。 |
 
 - animation-play-state——指定动画运行还是暂停
 
-  **属性值；**
+  | 值      | 说明           |
+  | ------- | -------------- |
+  | paused  | 暂停动画       |
+  | running | 正在运行的动画 |
 
-  - paused 暂停动画
-  - running 正在运行的动画
+- animation-fill-mode——规定动画完成后的状态
 
-- animation-fill-mode——规定动画完成后要执行的属性
+  | 值              | 说明                                                         |
+  | --------------- | ------------------------------------------------------------ |
+  | none **默认值** | 使动画不会对动画等待和动画完成的元素样式产生改变             |
+  | backwards       | 如果设置为这个值，那么在动画等待的那段时间内，元素的样式将设置为动画第一帧的样式； |
+  | forwards        | 如果设置为这个值，那么在动画结束后，元素的样式将设置为动画的最后一帧的样式； |
+  | both            | 相当于同时配置了backwards和forwards，意味着在动画等待和动画结束状态，元素将分别应用动画第一帧和最后一帧的样式。 |
 
-  **属性值；**
+**动画简写常用顺序；**
 
-  - none：这是默认值，正是这个值，使得动画不会对动画等待和动画完成的元素样式产生改变；
-  - backwards：如果设置为这个值，那么在动画等待的那段时间内，元素的样式将设置为动画第一帧的样式；
-  - forwards：如果设置为这个值，那么在动画结束后，元素的样式将设置为动画的最后一帧的样式；
-  - both：相当于同时配置了backwards和forwards，意味着在动画等待和动画结束状态，元素将分别应用动画第一帧和最后一帧的样式。
+animation：动画名称 动画时间 运动曲线  何时开始  播放次数  是否反方向  动画等待或者结束的状态;
+
+```css
+animation: myfirst 5s linear 2s infinite alternate;
+```
+
+
+
+**总结；**
+
+- 盒子动画结束后，停在结束位置：  animation-fill-mode  ：   forwards 
+- 想要动画走回来 ，而不是直接跳回来：animation-direction   ：  alternate  
+- 暂停动画：animation-play-state:   puased;   窗体给弄乱了，怎么办
+
