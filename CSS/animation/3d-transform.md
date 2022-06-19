@@ -212,11 +212,43 @@
 
 - translate3d(x,y,z) 定义3d平移
 
+> z 轴一般使用px作为单位。
+
+```css
+transform: translate3d(x,y,z)
+```
+
+#### perspective透视
+
+让元素具有三维效果，用来设置视距
+
+此属性需要写在父级元素上。
+
+数值越大元素距离屏幕越远。
+
+- 注意下方图片
+
+  - d：就是视距，视距就是指人的眼睛到屏幕的距离
+
+  - z：就是 z 轴，z 轴越大(正值)，我们看到的物体就越大
+
+    ![img](3d-transform-images/perspective.png)
+
+    
+
+```css
+ body{
+       perspective: 200px;
+    }
+```
+
+
+
 #### 3D旋转
 
 > 了解，物件是对著什么东西旋转，一般在 2D 的画面中，物件是要对著某一个点旋转，而在 3D 画面则是要对著某一条线来旋转，也就是刚提到的旋转轴。
 
-- rotate3d(*x*,*y*,*z*,*angle*) 定义3D旋转 (x, y, z) 三个值与 原点 (0, 0, 0) 形成的一条线，称为*旋转轴*，物件会对著该轴来做旋转，而 第四个参数 degree 则是旋转角度。
+
 
 
 
@@ -232,9 +264,47 @@
 
   ![rotateZ](3d-transform-images/rotateZ.gif)
 
+- rotate3d(*x*,*y*,*z*,*angle*) 定义3D旋转 (x, y, z) 三个值与 原点 (0, 0, 0) 形成的一条线，称为*旋转轴*，物件会对著该轴来做旋转，而 第四个参数 degree 则是旋转角度。
+
+`rotate3d`
+
+- `transform: rotate3d(x, y, z, deg)` -- 沿着自定义轴旋转 deg 为角度
+- x, y, z 表示旋转轴的矢量，是标识你是否希望沿着该轴进行旋转，最后一个标识旋转的角度
+  - `transform: rotate3d(1, 1, 0, 180deg)` -- 沿着对角线旋转 45deg
+  - `transform: rotate3d(1, 0, 0, 180deg)` -- 沿着 x 轴旋转 45deg
+
+
+
 **总结；**
 
-从上面的几个旋转方法看出，物件只是在原地旋转，因为物件的中心点 (0, 0, 0)，刚好就在旋转轴上，不管对著 x, y ,z 哪个轴旋转，中心点 (0, 0, 0) 都被这三个轴穿过，所以物件旋转的时候，中心点是不会变动的。
+从上面的几个旋转方法看出，物件只是在原地旋转，因为物件的中心点 (0, 0, 0)，刚好就在旋转轴上，不管对著 x, y ,z 
+哪个轴旋转，中心点 (0, 0, 0) 都被这三个轴穿过，所以物件旋转的时候，中心点是不会变动的。
+
+**旋转方向；**
+
+1. 左手准则
+
+- 左手的手拇指指向 x 轴的正方向
+
+- 其余手指的弯曲方向就是该元素沿着 x 轴旋转的方向
+
+  ![img](3d-transform-images/rotateX.png)
+
+2. 左手准则
+
+- 左手的拇指指向 y 轴的正方向
+
+- 其余的手指弯曲方向就是该元素沿着 y 轴旋转的方向(正值)
+
+  ![img](3d-transform-images/rotateY.png)
+
+#### `3D` 呈现 
+
+1. `transform-style`
+   - 控制子元素是否开启三维立体环境
+   - `transform-style: flat` 代表子元素不开启 `3D` 立体空间，默认的
+   - `transform-style: preserve-3d` 子元素开启立体空间
+   - 代码写给父级，但是影响的是子盒子
 
 #### 30缩放
 
@@ -246,7 +316,9 @@
 
 
 
-### transform-origin【设置转换元素的中心点】
+### transform-origin【中心点】
+
+设置转换元素的中心点
 
 > https://www.runoob.com/cssref/css3-pr-transform-origin.html
 

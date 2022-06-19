@@ -97,6 +97,7 @@ div
   | ease-in               | 动画以低速开始。                                             |
   | ease-out              | 动画以低速结束。                                             |
   | ease-in-out           | 动画以低速开始和结束。                                       |
+  | steps(int,start\|end) | 指定了时间函数中的间隔数量（步长）。有两个参数，第一个参数指定函数的间隔数，该参数是一个正整数（大于 0）<br/> start：表示直接开始。<br/> end：默认值，表示戛然而止 可以实现png序列背景动画播放 |
   | cubic-bezier(n,n,n,n) | 在 cubic-bezier 函数中自己贝塞尔曲线的值。可能的值是从 0 到 1 的数值。 |
 
 - animation-delay——设置一个动画延迟多少秒或毫秒开始
